@@ -1,0 +1,20 @@
+default: &default
+  adapter: jdbcpostgresql
+  encoding: unicode
+  host: localhost
+  username: mike
+  password:
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: development_qrreader
+
+test:
+  <<: *default
+  database: test_qrreader
+
+production:
+  <<: *default
+  database: production_qrreader
